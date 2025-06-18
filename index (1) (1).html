@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> XIT </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title"> </h1>
+      <p id=" "></p>
+      <script src="script.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XIT - Free SMM Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e1e5eb;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 50px;
+            font-weight: bold;
+            color: #4a6cf7;
+        }
+        
+        .menu-icon {
+            cursor: pointer;
+            font-size: 24px;
+        }
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 60px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            overflow: hidden;
+            z-index: 100;
+        }
+        
+        .dropdown-menu.show {
+            display: block;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-menu a:hover {
+            background: #f5f7fa;
+            color: #4a6cf7;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+        }
+        
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            color: #4a5568;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #4a6cf7;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .download-btn:hover {
+            background: #3a5ce4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        
+        .feature-card p {
+            color: #4a5568;
+        }
+        
+        .services {
+            margin: 70px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 30px;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        
+        .service-card p {
+            color: #4a5568;
+            font-size: 14px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #e1e5eb;
+            margin-top: 50px;
+            color: #4a5568;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">XIT</div>
+            <div class="menu-icon" id="menuIcon">☰</div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#home">Home</a>
+                <a href="#services">All Services</a>
+                <a href="#about">About</a>
+                <a href="#download">Download App</a>
+            </div>
+        </header>
+        
+        <section class="hero" id="home">
+            <h1>Free SMM Services for Everyone</h1>
+            <p>Boost your social media presence with our completely free SMM panel. Get real likes, followers, and engagement across all platforms.</p>
+            <a href="#download" class="download-btn">Download XIT App</a>
+        </section>
+        
+        <section class="features">
+            <div class="feature-card">
+                <h3>100% Free</h3>
+                <p>All our services are completely free with no hidden charges. Enjoy premium SMM services without spending a dime.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Fast Delivery</h3>
+                <p>Get your orders completed in minutes, not days. Our automated systems ensure quick delivery.</p>
+            </div>
+            <div class="feature-card">
+                <h3>24/7 Support</h3>
+                <p>Our support team is available round the clock to assist you with any queries or issues.</p>
+            </div>
+        </section>
+        
+        <section class="services" id="services">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We provide a wide range of social media marketing services for all major platforms.</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Instagram Followers</h3>
+                    <p>Get real and active Instagram followers to grow your account organically.</p>
+                </div>
+                <div class="service-card">
+                    <h3>YouTube Views</h3>
+                    <p>Increase your YouTube video views with high-retention traffic.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Twitter Likes</h3>
+                    <p>Boost your tweets with genuine likes and retweets.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Facebook Page Likes</h3>
+                    <p>Grow your Facebook page with real likes from active users.</p>
+                </div>
+                <div class="service-card">
+                    <h3>TikTok Views</h3>
+                    <p>Increase your TikTok video views and go viral faster.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Spotify Plays</h3>
+                    <p>Get more plays for your Spotify tracks and grow your audience.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="download" id="download">
+            <div class="section-title">
+                <h2>Download Our App</h2>
+                <p>Get all our services conveniently on your mobile device with the XIT app.</p>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#" class="download-btn" id="downloadBtn">Install XIT App Now</a>
+            </div>
+        </section>
+        
+        <section class="about" id="about" style="margin-top: 70px;">
+            <div class="section-title">
+                <h2>About XIT</h2>
+                <p>We're revolutionizing social media marketing by providing premium services for free.</p>
+            </div>
+            <div class="feature-card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p>XIT is a free SMM panel created to help content creators, businesses, and influencers grow their social media presence without the high costs typically associated with these services. Our mission is to democratize social media growth and make powerful marketing tools accessible to everyone.</p>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2023 XIT SMM Panel. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle dropdown menu
+        document.getElementById('menuIcon').addEventListener('click', function() {
+            document.getElementById('dropdownMenu').classList.toggle('show');
+        });
+        
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('#menuIcon')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        });
+        
+        // Download app functionality
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // This would be replaced with actual app download logic
+            alert('Downloading XIT app... Redirecting to app store.');
+            // In a real implementation, you would redirect to:
+            // window.location.href = 'your-app-store-link';
+        });
+    </script>
+</body>
+</html>
